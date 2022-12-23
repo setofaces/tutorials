@@ -34,7 +34,7 @@ public class DocumentController {
         reportBuilder.template(reportTemplateBuilder.build());
         BandBuilder bandBuilder = new BandBuilder();
         String json = FileUtils.readFileToString(new File("./src/main/resources/Data.json"));
-        ReportBand main = bandBuilder.name("Main").query("Main", "parameter=param1 $.main", "json").build();
+        ReportBand main = bandBuilder.name("Main").query("Main", "parameter=param1$.main", "json").build();
         reportBuilder.band(main);
         Report report = reportBuilder.build();
 
